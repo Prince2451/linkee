@@ -1,0 +1,80 @@
+.BodyContainer{
+  display: flex;
+}
+.Admin{
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+}
+.LogoutBtn{
+  color: #2987ba;
+}
+.LogoutBtn:hover,
+.LogoutBtn:active {
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3), 0 -1px 4px rgba(0, 0, 0, 0.3);
+}
+.ImageContainer{
+  display: flex;
+  align-items: center;
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  height: 50px;
+  margin-right: 5px;
+}
+.Account{
+  margin: 0 0 5px;
+  padding: 0;
+  color: #fff;
+}
+.Image{
+  display: block;
+  width: 100%;
+  align-self: center;
+}
+.Span{
+  display: block;
+  width: 70%;
+  align-self: center;
+}
+.View{
+  width: 50vw;
+}
+.LinkBtn{
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  display: flex;
+}
+.ViewContainer{
+  width: 80%;
+  max-width: 375px;
+  margin: auto;
+  border-radius: 25px;
+  overflow: scroll;
+  border: 6px solid #333;
+  height: 100vh;
+  max-height: 600px;
+  transform: scale(.7) translateY(-15%);
+  scrollbar-width: none;
+}
+.ViewContainer::-webkit-scrollbar{
+  display: none;
+}
+
+@media only screen and (min-width: 800px){
+  .Admin{
+    width: 50vw;
+  }
+  .LogoutBtn{
+    display: none !important;
+  }
+  .Span{
+    display: none !important;
+  }
+  .Account{
+    width:50px;
+    margin: 0;
+  }
+}

@@ -1,0 +1,137 @@
+.Appearence {
+  width: fit-content;
+  margin: 0 0 0 10%;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.Appearence::-webkit-scrollbar{
+  display: none;
+}
+.InputContainer {
+  width: fit-content;
+}
+.InputContainer div {
+  display: flex;
+  width: 70%;
+  margin: 15px auto;
+}
+.InputContainer > div > input{
+  margin-left: 10px;
+}
+.InputContainer > div > input[type="color"] {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+.UploadContainer{
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.InputContainer > div > select{
+  align-self: center;
+  margin-left: 10px;
+  border: none;
+  text-transform: capitalize;
+  width: 150px;
+}
+.InputContainer > div > select:focus{
+  outline: none;
+}
+.InputContainer div label {
+  display: inline-block;
+  width: 200px;
+}
+
+.ProgressBar svg {
+  height: 40px;
+  width:40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.ProgressBar svg circle {
+  height: 60px;
+  width: 60px;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+  stroke-width: 0.5em;
+  stroke: #666;
+  z-index: 20;
+}
+.ProgressBar svg .Bar {
+  stroke: #30b6ff;
+}
+.ProgressBar {
+  display: block;
+  height: 60px;
+  width: 60px;
+  margin: 0 auto !important;
+  border-radius: 100%;
+  position: absolute;
+}
+.ProgressBar::after {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  left: 0%;
+  top: 0%;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  content: "";
+  border-radius: 100%;
+  font-size: 0.8em;
+}
+.AddFile{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: block;
+  
+}
+.FileInput{
+  display: block;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  z-index: 10;
+}
+.UpdateBtnContainer{
+  text-align: right;
+  margin-right: 10%;
+}
+.UpdateBtn {
+  border: none;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgb(77, 190, 86);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+.UpdateBtn:hover {
+  filter: brightness(80%);
+}
+.UpdateBtn:focus {
+  outline: none;
+}
+@media only screen and (min-width: 800px){
+  .Appearence{
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 410px){
+  .Appearence{
+    width: 100%;
+    margin-left: 5px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .InputContainer div {
+    margin: 15px 0;
+  }
+}

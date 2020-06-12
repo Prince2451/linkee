@@ -1,0 +1,63 @@
+.Dialog {
+  position: fixed;
+  display: flex !important;
+  align-content: center;
+  justify-content: space-around;
+  top: 5vh;
+  left: 5vw;
+  padding: 5px 15px;
+  z-index: 999;
+  border-radius: 5px;
+  color: #111;
+  transform: translateY(-200%);
+  box-shadow: 0 3px 4px rgba(0,0,0,.5);
+}
+.Animate{
+  animation: showMessage 4s ease-in-out 1 forwards;
+}
+.Image {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+  border-radius: 50%;
+}
+.Svg {
+  align-self: center;
+  width: 70%;
+  height: 70%;
+  display: block;
+  margin: 15% auto;
+}
+.Message {
+  display: block;
+  width: 70%;
+  margin-left: 5%;
+  font-size: 0.8em;
+}
+
+@keyframes showMessage {
+  0% {
+    transform: translateY(-200%);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-200%);
+    display: none;
+  }
+}
+@media only screen and (max-width: 300px) {
+  .Dialog{
+    width: fit-content;
+  }
+  .Message{
+    display: none;
+  }
+}

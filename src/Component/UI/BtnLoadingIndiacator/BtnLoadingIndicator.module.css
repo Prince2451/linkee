@@ -1,0 +1,47 @@
+.Container{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.Container div{
+  display: flex;
+  justify-content: center;
+}
+.Span1,.Span2,.Span3{
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0 5px 3px;
+}
+.Span1{
+  animation: blink1 .7s ease-in-out infinite;
+}
+.Span2{
+  animation: blink2 .7s ease-in-out infinite;
+}
+.Span3{
+  animation: blink3 .7s ease-in-out infinite;
+}
+@keyframes blink1{
+  0%{
+    transform: translateY(-5px);
+  }
+  30%{
+    transform: translateY(0);
+  }
+}
+@keyframes blink2{
+  30%{
+    transform: translateY(-5px);
+  }
+  60%{
+    transform: translateY(0);
+  }
+}
+@keyframes blink3{
+  60%{
+    transform: translateY(-5px);
+  }
+  90%{
+    transform: translateY(0);
+  }
+}

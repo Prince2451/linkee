@@ -1,0 +1,123 @@
+.LinkCard{
+  display: flex;
+  width: 90%;
+  margin: 10px auto;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.5);
+  overflow: scroll;
+  scrollbar-width: none;
+  height: 90px;
+}
+.LinkCard::-webkit-scrollbar{
+  display: none;
+}
+.DragArea{
+  width: 5%;
+  height: 100%;
+  min-width: 30px;
+  max-width: 50px;
+  text-align: center;
+  border-right: 1px solid #ccc;
+  color: #444;
+  cursor: move;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.DragArea span{
+  line-height: 8px;
+  font-size: 2em;
+  height: fit-content;
+}
+.DragArea span:first-of-type{
+  margin-top: 25px;
+}
+.Input{
+  width: calc(80% - 50px);
+  min-width: 50px;
+}
+.Input input{
+  margin-bottom: 10px;
+  font-family: 'Balsamiq Sans';
+}
+.Input > div:first-of-type > input{
+  font-weight: 700;
+}
+.Images{
+  width: 10%;
+  min-width: 50px;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: center;
+  align-self: center;
+}
+.Images .CheckBox{
+  width: 45px;
+  height: 28px;
+  position: absolute;
+  opacity: 0;
+  z-index: 10;
+}
+.Images span{
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 23px;
+}
+.Images span::after{
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: 7.5%;
+  width: 45%;
+  height: 70%;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: .3s all ease-in-out;
+}
+.Images span::before{
+  content: '';
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  border-radius: 25px;
+  height: 100%;
+  background-color: #ccc;
+  transition: .3s all ease-in-out;
+}
+.Images .CheckBox:checked + span::after{
+  left: 50%;
+}
+.Images .CheckBox:checked + span::before{
+  background-color: #30b6ff;
+}
+.CheckRed:checked + span::before{
+  background-color: rgb(204, 67, 67) !important;
+}
+.CheckOrange:checked + span::before{
+  background-color: rgb(243, 169, 31) !important;
+}
+.Images svg{
+  display: block;
+  width: fit-content;
+  align-self: center;
+}
+.Images svg:hover,.Images svg:active{
+  fill: rgb(204, 67, 67);
+}
+@keyframes changeOrder{
+  0%{
+    order: 0;
+  }
+  100%{
+    order: 2;
+  }
+}

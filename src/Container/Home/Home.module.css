@@ -1,0 +1,28 @@
+.BtnContainer button {
+  width: 100%;
+}
+
+.Signup {
+  background-color: transparent;
+  color: #fff;
+}
+.Signup:hover,
+.Signup:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.Signin {
+  background-color: rgb(255, 255, 255);
+  color: #2987ba;
+}
+.Signin:hover,
+.Signin:active {
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.3), 0 -1px 4px rgba(0, 0, 0, 0.3);
+}
+@media only screen and (min-width: 800px) {
+  .BtnContainer {
+    display: flex;
+  }
+  .BtnContainer button{
+    width: fit-content !important;
+  }
+}

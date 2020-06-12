@@ -1,0 +1,89 @@
+.MenuBtn{
+  align-self: center;
+  width: 40px;
+  align-self: center;
+  margin-right: 5px;
+}
+.Container{
+  align-self: center;
+  position: relative;
+}
+.MenuBtn span{
+  border-radius: 12px;
+  display: block;
+  width: 90%;
+  height: 3px;
+  margin: 6px 0;
+  background-color: #fff;
+}
+.Menu{
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  border-radius: 5px;
+  width: 150px;
+  box-shadow: 0 3px 4px rgba(0,0,0,.5);
+  z-index: 100;
+  background-color: #fff;
+  padding: 10px;
+  background-image: linear-gradient(136deg, #30b6ff 46%, #2987ba 54%);
+  transition: .5s opacity ease-in-out;
+}
+.MenuContent button {
+  display: block;
+  margin: 0;
+  width: 100%;
+  border: none;
+  height: 35px;
+  border-radius: 5px;
+  transition: 0.5s all ease-in-out;
+  font-size: .9em;
+  font-weight: 500;
+}
+.MenuContent button:focus {
+  outline: none;
+}
+
+.Show{
+  display: block;
+  animation: show .5s ease-in-out 1;
+}
+.Hide{
+  display: none;
+}
+.MenuContent{
+  width: 100%;
+  align-self: center;
+}
+@keyframes show{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+@media only screen and (min-width: 800px){
+  .MenuBtn{
+    display: none;
+  }
+  .Container{
+    right: 10px;
+  }
+  .Menu{
+    display: flex !important;
+    position: relative;
+    top: 0;
+    right: 0;
+    box-shadow: none;
+    background-image: none;
+    background-color: transparent;
+    padding: 0;
+    width: fit-content;
+  }
+  .MenuContent{
+    display: flex;
+    flex-flow: row;
+  }
+}

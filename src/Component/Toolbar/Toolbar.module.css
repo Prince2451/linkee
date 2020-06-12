@@ -1,0 +1,99 @@
+.Toolbar{
+  margin: 90px auto 0;
+  display: block;
+  width: 95vw;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+.Container{
+  display: flex;
+  align-content: center;
+  justify-content: inherit;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.Container::-webkit-scrollbar{
+  display: none;
+}
+.Container > a{
+  display: block;
+  color: #111;
+  position: relative;
+  height: 100%;
+  text-decoration: none;
+  padding: 0 10px;
+  line-height: 50px;
+  width: fit-content;
+}
+.LinkContainer{
+  display: flex;
+  justify-content: inherit;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.LinkContainer::-webkit-scrollbar{
+  display: none;
+}
+.LinkContainer p{
+  display: block;
+}
+.LinkContainer p a{
+  text-decoration: none;
+  color: #2987ba;
+}
+.Container > a::before{
+  content: '';
+  width: 0%;
+  height: 4px;
+  background-color: #2987ba;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  border-radius: 10px 10px 0 0;
+  transition: .2s all ease-in-out;
+}
+.Container > a:hover::before{
+  width: 70%;
+  right: 15%;
+}
+.Container > a:nth-child(1)::after,.Container > a:nth-child(2)::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 15%;
+  right: 1px;
+  background-color: #ddd;
+  width: 1px;
+  height: 70%;
+}
+.ActiveLink::before{
+  width: 70% !important;
+  right: 15% !important;
+}
+
+@keyframes animate{
+  0%{
+    width: 0%;
+    right: 50%;
+  }
+  100%{
+    width: 70%;
+    right: 15%;
+  }
+}
+@media only screen and (min-width: 800px){
+  .Toolbar{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 320px){
+  .Container{
+    margin-left: 2.5vw;
+  }
+  .Container{
+    padding: 0 5px;
+  }
+}
